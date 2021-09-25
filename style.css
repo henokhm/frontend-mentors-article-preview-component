@@ -1,0 +1,42 @@
+/*******************
+Reset
+********************/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img { 
+  max-width: 100%;
+}
+
+
+/*******************
+Custom Properties
+********************/
+
+:root {
+  --clr-vary-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --clr-grayish-blue: hsl(212, 23%, 69%);
+  --clr-light-grayish-blue: hsl(210, 46%, 95%);
+  --ff-primary: 'Manrope', sans-serif;
+}
+
+/*******************
+General Styles
+********************/
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: var(--ff-primary);
+  font-size: 0.8125rem;
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
