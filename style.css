@@ -58,6 +58,7 @@ Article Preview Component Styles
   overflow: hidden;
   background-color: #FFFFFF;
   width: 80%;
+  max-width: 400px;
   margin: 3em auto;
   box-shadow: 3px 13px 19px 0px rgba(50, 50, 50, 0.23);
 }
@@ -111,6 +112,44 @@ Article Preview Component Styles
   margin-right: 1em;
 }
 
+@media (min-width: 400px) {
+  .article-preview-card__content {
+    padding: 2em;
+  }
+
+  .article-preview-card__author-social-wrapper {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .article-preview-card {
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 800px;
+  }
+
+  .article-preview-card__image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .article-preview-card__content {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .article-preview-card__author-social-wrapper {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+
+}
+
 /*******************
 Article Author Card Styles
 ********************/
@@ -118,7 +157,7 @@ Article Author Card Styles
 .article-author-card {
   padding: 1em;
   display: grid;
-  grid-template-columns: 1fr, auto;
+  grid-template-columns: 1fr auto;
 }
 
 .article-author-card__avatar {
